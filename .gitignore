@@ -1,0 +1,12 @@
+# Vite
+node_modules
+dist
+.vite
+
+# Variables d'environnement (ne jamais committer)
+.env
+.env.local
+.env.production
+
+# OS
+.DS_Store
