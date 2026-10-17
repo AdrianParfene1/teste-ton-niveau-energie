@@ -4,40 +4,40 @@ import { getDifficultyColor } from '../../utils/scoring'
 
 const INTERPRETATIONS = {
   exhaustion: {
-    ok: "Votre réservoir d'énergie physique est en bon état.",
-    risk: "Votre corps accumule de la fatigue. Accordez-vous des pauses intentionnelles.",
-    alert: "Votre épuisement est profond. Il est temps d'agir avant que le corps n'impose lui-même l'arrêt.",
+    ok: "Votre énergie physique semble bien présente en ce moment. C'est une bonne base.",
+    risk: "Votre corps commence à ressentir la fatigue de manière plus régulière. Quelques pauses peuvent faire une vraie différence.",
+    alert: "Votre corps vous envoie des signaux de fatigue importants. Prendre soin de votre récupération peut être une première étape utile.",
   },
   mentalDistance: {
-    ok: "Vous êtes présent(e) et engagé(e) dans ce que vous faites.",
-    risk: "Un détachement progressif s'installe. Reconnectez-vous à ce qui a du sens pour vous.",
-    alert: "Vous fonctionnez en pilote automatique. Cette distance est un signal d'alarme à prendre au sérieux.",
+    ok: "Vous semblez présent(e) et impliqué(e) dans ce que vous faites au quotidien.",
+    risk: "Il peut arriver que vous vous sentiez un peu moins connecté(e) à ce qui vous entoure. Observer ce dont vous avez besoin peut être utile.",
+    alert: "Vous ressentez peut-être une certaine distance avec votre quotidien. C'est un signe que quelque chose mérite votre attention.",
   },
   emotional: {
-    ok: "Votre vie émotionnelle est équilibrée et régulée.",
-    risk: "Vos émotions deviennent plus difficiles à gérer. Explorez ce qui se passe en dessous.",
-    alert: "Vos émotions sont débordées. Un accompagnement peut vous aider à retrouver une stabilité.",
+    ok: "Vos émotions semblent bien présentes et accessibles dans votre quotidien.",
+    risk: "Vos émotions peuvent être plus intenses ces derniers temps. Ce n'est pas un signe de faiblesse.",
+    alert: "Vos émotions semblent demander beaucoup d'espace en ce moment. Prendre un peu de temps pour soi peut aider.",
   },
   cognitive: {
-    ok: "Votre clarté mentale et votre concentration sont bien préservées.",
-    risk: "Votre capacité de concentration et de décision commence à fléchir.",
-    alert: "Votre cerveau est en surcharge. La concentration et la créativité sont sévèrement impactées.",
+    ok: "Votre clarté mentale et votre concentration semblent bien préservées.",
+    risk: "Votre concentration peut vous sembler moins fluide qu'avant. C'est souvent lié à la fatigue globale.",
+    alert: "Votre mental semble mobilisé en permanence. Réduire les sollicitations peut libérer de l'espace.",
   },
   secondary: {
-    ok: "Votre corps exprime peu de symptômes de stress chronique.",
-    risk: "Des signaux physiques commencent à apparaître. Votre corps parle — écoutez-le.",
-    alert: "Votre corps porte une charge importante. Ces symptômes ne doivent pas être ignorés.",
+    ok: "Votre corps exprime peu de tension ou de stress accumulé en ce moment.",
+    risk: "Quelques signaux physiques commencent à se manifester. Votre corps cherche à vous transmettre quelque chose.",
+    alert: "Votre corps semble porter une charge significative en ce moment. Ces signaux méritent d'être écoutés avec bienveillance.",
   },
   body: {
-    ok: "Vous êtes connecté(e) à votre corps et à votre souffle.",
-    risk: "Vous vous déconnectez progressivement de vos sensations corporelles.",
-    alert: "Vous vivez presque exclusivement dans votre tête. Reconnecter corps et souffle est urgent.",
+    ok: "Vous semblez bien connecté(e) à votre corps et à vos sensations.",
+    risk: "Il peut arriver que vous fonctionniez davantage dans votre tête que dans votre corps. Une attention au souffle peut aider.",
+    alert: "Vous vivez peut-être surtout dans votre espace mental en ce moment. Revenir au corps, doucement, peut être une ressource précieuse.",
   },
 }
 
 function getLevel(score) {
-  if (score >= 80) return 'alert'
-  if (score >= 60) return 'risk'
+  if (score > 70) return 'alert'
+  if (score > 40) return 'risk'
   return 'ok'
 }
 

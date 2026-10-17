@@ -20,14 +20,14 @@ export function computeScores(answers) {
 }
 
 export function getDifficultyLevel(score) {
-  if (score >= 80) return 'alert'
-  if (score >= 60) return 'risk'
+  if (score > 70) return 'alert'
+  if (score > 40) return 'risk'
   return 'ok'
 }
 
 export function getDifficultyColor(score) {
-  if (score >= 80) return '#D9706A'
-  if (score >= 60) return '#E8A87C'
+  if (score > 70) return '#D9706A'
+  if (score > 40) return '#E8A87C'
   return '#4CAF82'
 }
 

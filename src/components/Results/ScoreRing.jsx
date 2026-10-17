@@ -49,10 +49,10 @@ export default function ScoreRing({ globalScore }) {
 
       <p className="font-subtitle italic text-[#8A9BB5] mt-4">
         {vitality >= 60
-          ? 'Votre énergie est préservée'
+          ? 'Votre énergie semble préservée'
           : vitality >= 30
-            ? 'Des signaux à ne pas ignorer'
-            : 'Votre énergie a besoin d\'attention'}
+            ? 'Votre énergie mérite un peu d\'attention'
+            : 'Votre énergie mérite de l\'attention'}
       </p>
     </div>
   )
